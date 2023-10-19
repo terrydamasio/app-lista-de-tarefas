@@ -1,7 +1,7 @@
 function editar(id, txt_tarefa) {
     //1) criando form de edição
     let form = document.createElement('form')
-    form.action = '../../tarefa.controller.php?acao=atualizar'
+    form.action = '../../index.php?pag=index&acao=atualizar'
     form.method = 'post'
     form.className = 'row'
     
@@ -49,9 +49,9 @@ function editar(id, txt_tarefa) {
 }
 
 function remover(id) {
-    location.href = '../../todas_tarefas.php?acao=remover&id='+id;
+    location.href = '../../index.php?pag=index&acao=remover&id='+id;
 }
 
 function marcarRealizada(id) {
-    location.href = '../../todas_tarefas.php?acao=marcarRealizada&id='+id;
+    location.href = '../../index.php?pag=index&acao=marcarRealizada&id='+id;
 }
