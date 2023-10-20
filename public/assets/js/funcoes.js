@@ -49,9 +49,21 @@ function editar(id, txt_tarefa) {
 }
 
 function remover(id) {
-    location.href = '../../index.php?pag=index&acao=remover&id='+id;
+    $.ajax({
+        url: '../../todas_tarefas.php?pag=todas_tarefas&acao=remover&id=' + id,
+        type: 'GET',
+        success: function(response) {
+            location.href = '../../todas_tarefas.php?pag=todas_tarefas&acao=marcarRealizada&id='+id;
+        }
+    });
 }
 
 function marcarRealizada(id) {
-    location.href = '../../index.php?pag=index&acao=marcarRealizada&id='+id;
+    $.ajax({
+        url: '../../todas_tarefas.php?pag=todas_tarefas&acao=marcarRealizada&id=' + id,
+        type: 'GET',
+        success: function(response) {
+            location.href = '../../todas_tarefas.php?pag=todas_tarefas&acao=marcarRealizada&id='+id;
+        }
+    });
 }
